@@ -26,10 +26,17 @@ var results = [(key: AnyObject, value: AnyObject)]()
 print("  ")
 print(results)
 
-
 print("  ")
 //============================//
 // Now print the temp line the SwiftyJSON way (if SwiftyJSON already added to repo)
 
+let swiftyjson = try JSON(data: data as Data)
 
+if let temp_data = swiftyjson["main"]["temp"][""].float {
+  print(temp_data)
+}
+
+
+
+print("\n---------\n")
 

@@ -4,7 +4,22 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 let url = "http://api.openweathermap.org/data/2.5/weather?lat=40.443229&lon=-79.944137&APPID=ad83d72d867862de7a87faec3178ffa6"
 
-// Your structs go here
+
+struct Station: Decodable {
+    let id: Int
+    let name: String
+    let forecast: weatherData
+    
+    enum CodingKeys : String, CodingKey {
+        case id
+        case name
+        case forecast = "main"
+    }
+    
+}
+
+struct
+
 
 
 
